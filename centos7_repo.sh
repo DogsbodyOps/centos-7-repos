@@ -27,8 +27,8 @@ mv /etc/yum.repos.d/CentOS-Vault.repo /etc/yum.repos.d/CentOS-Vault.repo.bak
 
 # This will be changed to a controlled repo when testing is complete.
 echo "wget known good repo files to location"
-wget https://github.com/DogsbodyOps/centos-7-repos/raw/branch/main/CentOS-Base.repo -P /etc/yum.repos.d/
-wget https://github.com/DogsbodyOps/centos-7-repos/raw/branch/main/CentOS-Vault.repo -P /etc/yum.repos.d/
+wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Base.repo -P /etc/yum.repos.d/
+wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Vault.repo -P /etc/yum.repos.d/
 
 
 # Creates a marker file to let the script/playbook know it's been here before.
