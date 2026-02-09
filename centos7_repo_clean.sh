@@ -37,8 +37,8 @@ rm -f /etc/yum.repos.d/epel-testing.repo
 
 # This will be changed to a controlled repo when testing is complete.
 echo "wget known good repo files to location"
-wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Base.repo -P /etc/yum.repos.d/
-wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Vault.repo -P /etc/yum.repos.d/
+wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Base.repo -P /etc/yum.repos.d/ || { echo "Failed to download CentOS-Base.repo"; exit 1; }
+wget https://raw.githubusercontent.com/DogsbodyOps/centos-7-repos/refs/heads/main/CentOS-Vault.repo -P /etc/yum.repos.d/ || { echo "Failed to download CentOS-Vault.repo"; exit 1; }
 
 
 # Creates a marker file to let the script/playbook know it's been here before.
